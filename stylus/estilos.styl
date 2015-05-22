@@ -1,26 +1,72 @@
 @import "normalize.styl"
+@import "fonts.styl"
 
 gris_oscuro = #333333
 gris_claro = #818181
+rojo = #BD255B
 
 body
 	font-size 16px	
 	font-family 'Varela Round', sans-serif
 figure
 	margin 0
+img
+	vertical-align top
 a
 	text-decoration none
 //button
 .button-menu
+	color gris_oscuro
+	left .5em
+	margin-top -10px
 	position absolute
 	top 50%
-	margin-top -10px
-	left .5em
 //oocss classes
 .relative
 	position relative
+.center-block
+	margin 0 auto
+.center-text
+	text-align center
+.right-text
+	text-align right
 .border-bottom
 	border-bottom 1px solid gris_claro
+.padding
+	padding 1em	
+.padding-tb
+	padding 1em 0
+.progress
+	margin 1em 0
+	.min
+	.max
+		font-size .8em
+		top -5px
+		position absolute
+	.min		
+		left 0
+	.max
+		right 0
+	.total
+		background gris_claro
+		border-radius 5px
+		height 5px
+		margin 0 auto
+		width 75%
+	.state
+		height 5px
+		background rojo
+		width 30%
+		border-radius 5px
+		.circle
+			width 10px
+			height 10px
+			background gris_oscuro
+			border-radius 50%
+			position absolute
+			right 0
+			top -2px
+
 .name
 	color gris_oscuro	
 .author
@@ -40,6 +86,7 @@ a
 	font-size 0	
 	padding 1.4rem	
 	text-align center
+
 .song
 	display inline-block
 	font-size 1rem
@@ -51,3 +98,23 @@ a
 		margin-right 0
 	p
 		margin .5em 0
+		
+.playing
+	&.small
+		width 20em
+		
+.actions
+	position absolute
+	bottom 0
+	right 0
+	left 0	
+	background rgba(black,.3)
+
+.action
+	color white
+	margin-right .5em
+	font-size 1.2em
+	&:last-child
+		margin-right 0
+	&.gray
+		color gris_claro
